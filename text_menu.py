@@ -1,6 +1,5 @@
-from formatting.formatted_text_menu import FormattedTextMenu
-from staticresources.constant import Constant
 from sys import exit
+from text_menu_formatting import TextMenuFormatting as TMF
 
 
 class TextMenu:
@@ -17,12 +16,12 @@ class TextMenu:
                 self.previous_menu = previous_menu
 
         menu_options = list(self.options)
-        print(FormattedTextMenu.sub_title(self.title))
+        print(TMF.sub_title(self.title))
 
         if self.message:
-            print(FormattedTextMenu.body_content(self.message))
+            print(TMF.body_content(self.message))
 
-        print(FormattedTextMenu.options_menu(menu_options))
+        print(TMF.options_menu(menu_options))
 
         nav_map = {}
         x = 0
@@ -33,23 +32,23 @@ class TextMenu:
         try:
             selection = int(input("Select Option: "))
         except(BaseException):
-            Constant.clear()
-            print(FormattedTextMenu.error_title("Invalid Selection!"))
+            TMF.clear()
+            print(TMF.error_title("Invalid Selection!"))
             self.navigate(self, True)
 
         if str(selection) in nav_map:
             if self.options[nav_map[str(selection)]] == "return":
-                Constant.clear()
+                TMF.clear()
                 self.previous_menu.navigate(self, True)
                 pass
             elif self.options[nav_map[str(selection)]] == "exit":
-                Constant.clear()
-                print(FormattedTextMenu.main_title("Goodbye!"))
+                TMF.clear()
+                print(TMF.main_title("Goodbye!"))
                 exit(0)
             else:
-                Constant.clear()
+                TMF.clear()
                 self.options[nav_map[str(selection)]](self)
         else:
-            Constant.clear()
-            print(FormattedTextMenu.error_title("Invalid Selection!"))
+            TMF.clear()
+            print(TMF.error_title("Invalid Selection!"))
             self.navigate(self, True)

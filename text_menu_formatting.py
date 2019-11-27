@@ -4,7 +4,7 @@ import os
 MENU_LEN = 63
 
 
-class FormattedTextMenu:
+class TextMenuFormatting:
     @staticmethod
     def main_title(title):
         outer_line = "|" + "*" * (MENU_LEN - 2) + "|"

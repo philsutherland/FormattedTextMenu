@@ -1,14 +1,9 @@
-from resources.text_menu import TextMenu
-from formatting.formatted_text_menu import FormattedTextMenu
-from exceptions.could_not_construct_object_exception import CouldNotConstructObjectException
-from staticresources.constant import Constant
 import os
 import datetime
+from text_menu_formatting import TextMenuFormatting as TMF
+from text_menu import TextMenu
 
-# print(Constant.num_step_upper_limit())
-
-
-print("\n" + FormattedTextMenu.main_title("Welcome to AbsorbSim Pro V2.0"))
+print("\n" + TMF.main_title("Welcome to AbsorbSim Pro V2.0"))
 
 
 def print_equilibrium_profile_to_CSV(equilibrium_profile):
