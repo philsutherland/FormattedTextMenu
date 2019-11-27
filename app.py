@@ -1,12 +1,10 @@
-import os
-import datetime
 from text_menu_formatting import TextMenuFormatting as TMF
 from text_menu import TextMenu
 
-print("\n" + TMF.main_title("Welcome to Example Menu Version 0.9"))
+print("\n" + TMF.main_title("Welcome to Example Menu"))
 
 about_us = """
-    - Version 0.9
+    - Version 0.9.1
     - This package was designed and built by 
       Phil Sutherland on 2019-06-15"""
 
