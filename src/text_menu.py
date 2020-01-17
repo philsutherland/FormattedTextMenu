@@ -1,5 +1,5 @@
 from sys import exit
-from text_menu_formatting import TextMenuFormatting as TMF
+from .text_menu_formatting import TextMenuFormatting as TMF
 
 
 class TextMenu:

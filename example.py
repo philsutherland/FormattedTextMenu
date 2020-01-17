@@ -1,5 +1,5 @@
-from text_menu_formatting import TextMenuFormatting as TMF
-from text_menu import TextMenu
+from src.text_menu_formatting import TextMenuFormatting as TMF
+from src.text_menu import TextMenu
 
 print("\n" + TMF.main_title("Welcome to Example Menu"))
 
